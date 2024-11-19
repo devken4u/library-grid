@@ -1,0 +1,29 @@
+<main class="roboto-regular">
+  @for(book of bookList; track $index){
+  <div class="book-card">
+    <div class="book-card__image__container">
+      <img class="book-card__image" [src]="book.image" />
+    </div>
+    <div class="book-card__details">
+      <p class="book-card__details__information roboto-bold">
+        Title: <span class="roboto-regular">{{ book.title }}</span>
+      </p>
+
+      <p class="book-card__details__information roboto-bold">
+        Author: <span class="roboto-regular">{{ book.author }}</span>
+      </p>
+
+      <p class="book-card__details__information roboto-bold">
+        Year: <span class="roboto-regular">{{ book.publicationYear }}</span>
+      </p>
+
+      <p class="book-card__details__information roboto-bold">
+        Genre: <span class="roboto-regular">{{ book.genre }}</span>
+      </p>
+      <div class="button-container">
+        <button class="button-borrow roboto-medium">Borrow</button>
+      </div>
+    </div>
+  </div>
+  }
+</main>
